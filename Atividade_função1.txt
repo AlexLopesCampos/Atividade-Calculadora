@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdlib.h>
+void soma(float num1, float num2){
+	float res;
+	res = num1 + num2;
+	printf("Resultado: %2.f", res);
+}
+void sub(float num1, float num2){
+	float res;
+	res = num1 - num2;
+	printf("Resultado: %2.f", res);
+}
+void mult(float num1, float num2){
+	float res;
+	res = num1 * num2;
+	printf("Resultado: %2.f", res);
+}
+void divi (float num1, float num2){
+	float res;
+	if(num2 ==0){
+		printf("erro divisão por 0:\n");
+	}else{
+	res = num1 / num2;
+	printf("Resultado: %2.f", res);
+}
+}
+float valor(){
+	float numero;
+	printf("digite um numero");
+	scanf("%f", &numero);
+	return numero;
+}
+
+
+
+
+int main(void) {
+	int op;
+
+	printf("escolha uma operação:\n");
+	scanf("%c", &op);
+	switch(op){
+	case '+':
+		soma(valor(),valor());
+	break;
+		
+	case '-':
+			sub(valor(),valor());
+	break;
+		
+	case '*':
+			mult(valor(),valor());
+	break;
+		
+	case '/':
+			divi(valor(),valor());
+	break;
+		
+		default: printf("sem operação:\n");
+	}
+}
